@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
  
- 
+  
 app = Flask(__name__)
  
 app.secret_key = 'your secret key'
@@ -17,6 +17,7 @@ mysql = MySQL(app)
   
 @app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
+
 def login():
     msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
